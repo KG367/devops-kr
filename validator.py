@@ -1,4 +1,14 @@
 # validator.py
+def validate_phone(phone: str) -> bool:
+    """Validate Russian phone number."""
+    import re
+    pattern = r'^(\+7|8)[\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$'
+    return bool(re.match(pattern, phone))
+
+def validate_inn(inn: str) -> bool:
+    """TODO: валидация ИНН."""
+    pass
+
 def validate_email(email: str) -> bool:
     """Валидация email-адреса."""
     import re
