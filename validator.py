@@ -8,7 +8,7 @@ def validate_email(email: str) -> bool:
     
 
 def validate_phone(phone: str) -> bool:
-    """Валидация расийского номера телефона.""" # Специально с опечаткой для 4-го коммита
+    """Валидация российского номера телефона.""" # Специально с опечаткой для 4-го коммита
     import re
     pattern = r'^\+?7\d{10}$'
     return bool(re.match(pattern, phone.replace('-', '').replace(' ', '')))
