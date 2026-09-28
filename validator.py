@@ -12,10 +12,6 @@ def validate_phone(phone: str) -> bool:
     pattern = r'^\+?7\d{10}$'
     return bool(re.match(pattern, phone.replace('-', '').replace(' ', '')))
 
-def validate_inn(inn: str) -> bool:
-    """TODO: валидация ИНН."""
-    pass
-
 
 def validate_snils(snils: str) -> bool:
     """Валидация СНИЛС (Страховой номер индивидуального лицевого счёта).
