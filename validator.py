@@ -6,3 +6,4 @@ def validate_email(email):
 def validate_phone(phone):
     """Проверка российского номера телефона."""
     return phone.startswith("+7") and len(phone) == 12
+# WIP
