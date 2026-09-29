@@ -1,4 +1,6 @@
 # tests/test_validator.py
-def test_validate_email():
-    assert validate_email("test@example.com") == True
-    assert validate_email("invalid") == False
+from validator import validate_phone
+
+def test_validate_phone():
+    assert validate_phone("+79161234567") is True
+    assert validate_phone("89161234567") is False
