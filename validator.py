@@ -1,12 +1,49 @@
 # validator.py
-            def validate_phone(phone: str) -> bool:
- """Валидация Российского номера телефона."""
- import re
- pattern = r'^\+?7\d{10}$'
- return bool(re.match(pattern, phone.replace('-', '').replace(' ', '')))
+
+
+def validate_phone(phone: str) -> bool:
+    """Валидация Российского номера телефона."""
+    import re
+    pattern = r'^\+?7\d{10}$'
+    return bool(re.match(pattern, phone.replace('-', '').replace(' ', '')))
+
+
 def validate_email(email: str) -> bool:
     """Валидация email-адреса."""
     import re
     pattern = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
-    return bool(re.match(pattern, email))r) -> bool:
+    return bool(re.match(pattern, email))
+
+
+def validate_snils(snils: str) -> bool:
+    """Валидация СНИЛС (Страховой номер индивидуального лицевого счёта).
+
+    СНИЛС состоит из 11 цифр: 9 цифр номера + 2 цифры контрольного числа.
+    """
+    import re
+
+    # Удаляем пробелы и дефисы для удобства ввода
+    cleaned = snils.replace('-', '').replace(' ', '')
+
+    # Проверка формата: ровно 11 цифр
+    if not re.match(r'^\d{11}$', cleaned):
+    if calculated < 100:
+        expected = calculated
+    elif calculated % 101 == 100:
+
+    return expected == check_sum        expected = 0
+    else:
+        expected = calculated % 101
+    calculated = sum((9 - i) * numbers[i] for i in range(9))
+
+    # Применяем правила расчёта контрольного числа
+
+    # Вычисляем контрольную сумму:
+    # каждая цифра умножается на позицию (от 9 до 1)
+        return False
+
+    check_sum = int(cleaned[9:11])
+
+
+
 
